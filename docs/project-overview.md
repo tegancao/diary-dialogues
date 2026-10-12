@@ -53,7 +53,7 @@ way…")](figures/o3-three-chatbots.png)
 ![Eight cards, one per diarist, with an initial, name, age, a one-line life situation and tags for work and
 household, colored by age group](figures/o2-diarists.png)
 
-<details>
+<details markdown="1">
 <summary>The eight life situations</summary>
 
 | Diarist | Life situation |

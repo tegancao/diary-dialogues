@@ -7,6 +7,8 @@
     div.textContent = code.textContent;
     (code.closest("div.language-mermaid") || code.closest("pre")).replaceWith(div);
   }
+  await document.fonts.load("14px Inter");   // measure labels with the final font, or they get clipped
+  await document.fonts.ready;
   mermaid.initialize({ startOnLoad: false });
   await mermaid.run({ querySelector: ".mermaid" });
 </script>

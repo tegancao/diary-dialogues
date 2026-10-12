@@ -166,7 +166,7 @@ irrelevant to future turns"); it already holds between conversations.
 is steered toward entitlement or social isolation. The friend is steered the same way, not steered, steered away, or
 replaced by a fixed, content-free letter ("Thanks for your letter… nothing much to report"); two unsteered friends are
 the baseline. Each condition has 32 pairs (all 8 role cards in both seats, both writing orders), 288 in all, designed
-before any data existed ([PREREGISTRATION.md](../experiments/06-dyads/PREREGISTRATION.md)). Both friends are the same
+before any data existed. Both friends are the same
 model, Qwen2.5-7B, so this shows how one model's steered text affects another copy of it, not how people affect each
 other.
 

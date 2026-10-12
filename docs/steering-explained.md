@@ -112,7 +112,7 @@ flowchart LR
 ```
 
 In code, it is a single PyTorch forward hook on block 15
-([`diary_dialogues/simulator/steering.py`](../diary_dialogues/simulator/steering.py)):
+([`diary_dialogues/simulator/steering.py`](https://github.com/tegancao/diary-dialogues/blob/main/diary_dialogues/simulator/steering.py)):
 
 ```python
 def hook(module, inputs, output):

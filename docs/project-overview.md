@@ -102,7 +102,7 @@ Chosen from the 18 schemas of schema therapy because they show clearly in diarie
 | **Diary entries** | Does the pattern show? Is it coherent, does it read like a real diary? (0–100) | [evaluation.md](evaluation.md) |
 | **Chatbot replies** | 15 yes/no questions on 4 behaviors: escalating help appropriately, engaging with the person, exploring before advising, responding to the pattern | [evaluation.md](evaluation.md) |
 | **The chatbots on OpenAI's benchmark** | MentalHealthBench's own conversations and clinician-written criteria (not the diaries), graded with its paper's prompt and checked against published scores | [evaluation.md](evaluation.md) |
-| **Two steered friends** | A thought experiment: pattern scores letter by letter, plus examples; design pre-registered | [PREREGISTRATION.md](../experiments/06-dyads/PREREGISTRATION.md) |
+| **Two steered friends** | A thought experiment: pattern scores letter by letter, plus examples; design pre-registered | [findings.md](findings.md) |
 | **The judges themselves** | A second judge on the main results; ratings by people are future work | — |
 
 ## Under the hood

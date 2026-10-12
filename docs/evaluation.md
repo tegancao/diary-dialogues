@@ -83,9 +83,8 @@ behavior. Checking the judges against human ratings of a sample of replies is fu
 
 ## Two steered friends
 
-The letter-writing experiment was planned and written down before any data existed
-([PREREGISTRATION.md](../experiments/06-dyads/PREREGISTRATION.md)), after a small pilot showed how noisy single
-letters are (about ±15 points). It has:
+The letter-writing experiment was planned and written down before any data existed, after a small pilot showed
+how noisy single letters are (about ±15 points). It has:
 
 - **Controls:** a pair of two unsteered friends (the patterns' baseline), and a friend replaced by a fixed,
   content-free letter (how far the focal person drifts on their own).

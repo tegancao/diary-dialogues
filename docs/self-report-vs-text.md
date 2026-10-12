@@ -106,6 +106,6 @@ uv run --with modal modal run experiments/01-steered-diarists/questionnaire.py  
 uv run python docs/make_questionnaire_figures.py                                  # figures on this page
 ```
 
-Items and scoring: [`diary_dialogues/simulator/questionnaire.py`](../diary_dialogues/simulator/questionnaire.py).
+Items and scoring: [`diary_dialogues/simulator/questionnaire.py`](https://github.com/tegancao/diary-dialogues/blob/main/diary_dialogues/simulator/questionnaire.py).
 IPIP items are in the public domain. Diaries: `experiments/01-steered-diarists/screening.py`; judge scores:
 `judge_diaries.py`.

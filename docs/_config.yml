@@ -1,0 +1,7 @@
+# GitHub Pages builds the site from the Markdown files in docs/ (index.md is the home page).
+title: Diary Dialogues
+description: How AI chatbots answer simulated people with different ways of seeing themselves and others
+theme: jekyll-theme-primer
+exclude:
+  - "make_*.py"
+  - paper-outline.md

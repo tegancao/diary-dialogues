@@ -8,7 +8,7 @@ sides. No real people take part.
 
 - **Overview**, with diagrams: [docs/project-overview.md](docs/project-overview.md)
 - **How the evaluation works:** [docs/evaluation.md](docs/evaluation.md)
-- **Results so far:** [docs/findings.md](docs/findings.md); a one-page web version: [tegancao.github.io/diary-dialogues](https://tegancao.github.io/diary-dialogues/) ([source](docs/index.html))
+- **Results so far:** [docs/findings.md](docs/findings.md); also as a website built from these Markdown files: [tegancao.github.io/diary-dialogues](https://tegancao.github.io/diary-dialogues/)
 
 **Main result so far:** the open chatbots we tested (8B to 70B, including the newest Gemma) fall well short of the
 published standard on OpenAI's MentalHealthBench, and they show the same gaps answering the simulated diaries.
@@ -64,7 +64,7 @@ experiments/                  numbered in the order they were run, each with its
   03-mentalhealthbench        the chatbots on the benchmark, calibration, larger models
   04-reply-grading            borrowed criteria (did not transfer)
   05-flow-rubric              the behavior rubric, the second judge, a page for human ratings (future work)
-  06-dyads                    two steered friends (PREREGISTRATION.md)
+  06-dyads                    two steered friends
   07-negative-steering        steering away
 docs/                         write-ups, figures and the scripts that draw them
 scripts/                      data downloads

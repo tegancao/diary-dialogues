@@ -86,8 +86,11 @@ Asked to "write today's diary entry", a model falls back on one default person: 
 worker, often with a colleague named Sarah, never a child, and 40% of entries signed "Yours, [Your Name]".
 
 ![Bar chart comparing diaries without and with role cards. Without: 73% work in an office, 30% mention a colleague
-named Sarah, 7% a partner, 0% children, 40% sign off "[Your Name]". With: 42% office, 18% Sarah, 52% a partner, 32%
-children, 0% "[Your Name]"](figures/o4-why-role-cards.png)
+named Sarah, 7% a partner, 0% children, 40% sign off "Your Name". With: 42% office, 18% Sarah, 52% a partner, 32%
+children, 0% "Your Name"](figures/o4-why-role-cards.png#gh-light-mode-only)
+![Bar chart comparing diaries without and with role cards. Without: 73% work in an office, 30% mention a colleague
+named Sarah, 7% a partner, 0% children, 40% sign off "Your Name". With: 42% office, 18% Sarah, 52% a partner, 32%
+children, 0% "Your Name"](figures/o4-why-role-cards-dark.png#gh-dark-mode-only)
 
 The cards make results **generalize** (ages 19 to 71, different genders, households and jobs), keep comparisons
 **fair** (same person, different nudge) and allow **breakdowns** by group. The cost: patterns come through somewhat

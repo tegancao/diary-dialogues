@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Simulated diarists, AI chatbots, and what their conversations show.">
+<title>Diary Dialogues</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+<style>
+/* Layout: a single reading column (~68ch) with figures allowed to run wider; sticky section nav. Light by design:
+   the figures are drawn on white, so the page commits to one light look. */
+:root {
+  --paper: #fbfbfa;
+  --plate: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --rule: #e5e7eb;
+  --accent: #3b82c4;
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body: "Inter", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; }
+body { background: var(--paper); color: var(--ink); font: 400 16px/1.65 var(--body); padding-inline: 20px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+
+nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; background: color-mix(in srgb, var(--paper) 92%, transparent);
+  backdrop-filter: blur(6px); border-bottom: 1px solid var(--rule); margin-inline: -20px; padding: 12px 20px; }
+nav .in { max-width: 1040px; margin: 0 auto; display: flex; gap: 22px; align-items: baseline; flex-wrap: wrap; }
+nav .name { font: 500 18px/1 var(--display); color: var(--ink); text-decoration: none; margin-right: auto; }
+nav a.l { color: var(--muted); text-decoration: none; font-size: 14px; }
+nav a.l:hover { color: var(--ink); }
+
+main { max-width: 1040px; margin: 0 auto; padding-block: 56px 80px; display: grid; gap: 88px; }
+.col { max-width: 68ch; }
+section { display: grid; gap: 20px; scroll-margin-top: 72px; }
+
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+h1 { font: 400 clamp(36px, 6vw, 60px)/1.05 var(--display); letter-spacing: -.01em; margin: 0; text-wrap: balance; max-width: 18ch; }
+h2 { font: 400 clamp(26px, 3.4vw, 34px)/1.15 var(--display); margin: 0; text-wrap: balance; }
+h3 { font: 600 16px/1.4 var(--body); margin: 0; }
+p { margin: 0; }
+.lede { font-size: 19px; line-height: 1.6; color: var(--ink); max-width: 60ch; }
+.note { font-size: 13px; color: var(--muted); }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 32px; }
+.takeaway { font: 400 clamp(21px, 2.4vw, 26px)/1.35 var(--display); max-width: 40ch; border-top: 1px solid var(--rule); padding-top: 24px; }
+.fact b { display: block; font: 400 26px/1.15 var(--display); font-variant-numeric: tabular-nums; }
+.fact span { font-size: 14px; color: var(--muted); }
+
+figure { margin: 0; display: grid; gap: 10px; }
+figure img { width: 100%; height: auto; background: var(--plate); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; }
+figcaption { font-size: 13px; color: var(--muted); max-width: 80ch; }
+
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 24px; counter-reset: s; }
+.step { border-top: 2px solid var(--ink); padding-top: 12px; display: grid; gap: 6px; min-width: 0; align-content: start; }
+.step::before { counter-increment: s; content: counter(s); font: 400 22px/1 var(--display); color: var(--muted); }
+.step p { font-size: 14.5px; color: var(--muted); }
+
+.finding { display: grid; gap: 18px; padding-top: 28px; border-top: 1px solid var(--rule); }
+.finding .head { display: grid; grid-template-columns: 2.4em 1fr; gap: 4px 12px; align-items: baseline; }
+.finding .n { font: 400 22px/1 var(--display); color: var(--accent); }
+.finding .head p { grid-column: 2; color: var(--muted); max-width: 66ch; }
+.quote { font: italic 400 19px/1.5 var(--display); border-left: 2px solid var(--rule); padding-left: 16px; max-width: 60ch; }
+
+.status { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+.status div { display: grid; gap: 4px; min-width: 0; }
+.pill { justify-self: start; font-size: 12px; font-weight: 500; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--rule); color: var(--muted); }
+.pill.done { color: #1f6f5c; border-color: #b9dcd2; }
+.pill.run { color: #8a5a1c; border-color: #ead6b8; }
+
+.list { margin: 0; padding-left: 1.1em; display: grid; gap: 10px; max-width: 68ch; }
+.list li::marker { color: var(--muted); }
+.exchange { display: grid; gap: 10px; max-width: 64ch; }
+.exchange .quote { font-size: 17px; }
+footer { max-width: 1040px; margin: 0 auto; border-top: 1px solid var(--rule); padding-block: 24px 48px; display: grid; gap: 6px; }
+@media (max-width: 560px) { nav a.l { font-size: 13px; } nav .in { gap: 14px; } figure img { padding: 8px; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+</style>
+</head>
+<body>
+<nav><div class="in">
+  <a class="name" href="#top">Diary Dialogues</a>
+  <a class="l" href="#how">How it works</a>
+  <a class="l" href="#diarists">Diarists</a>
+  <a class="l" href="#methods">Methods</a>
+  <a class="l" href="#findings">Findings</a>
+  <a class="l" href="#next">Next</a>
+</div></nav>
+
+<main id="top">
+  <section>
+    <p class="eyebrow">Psychology × AI · simulated people, real models</p>
+    <h1>How do AI chatbots answer people who see the world differently?</h1>
+    <p class="lede">Eight simulated people keep a diary. Inside the model that writes it, each is nudged toward a pattern from
+      schema therapy: feeling alone, feeling entitled, never good enough. They share their entries with AI chatbots, and we
+      read what the chatbots say back, entry after entry.</p>
+    <p class="takeaway">The open chatbots we tested fall well short of the published standard, and they show the same
+      gaps answering the diaries.</p>
+    <div class="facts">
+      <div class="fact"><b>Far below the benchmark</b><span>On OpenAI's clinician-written benchmark, open models from 8B to 70B, including the newest Gemma, score 26–34. Claude Haiku and Opus, graded the same way, score 43 and 50.</span></div>
+      <div class="fact"><b>The same gaps in the diaries</b><span>Answering simulated diarists, Phi-4 and Gemma rarely ask a question, and Gemma treats distress as a piece of writing. Claude asks in most replies.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <figure>
+      <img src="figures/o1-rosa-three-ways.png" alt="Rosa's first diary entry three ways: with no nudge, nudged toward social isolation, and nudged toward entitlement.">
+      <figcaption>Rosa, 47, a nurse. Same Monday, same instructions; only the nudge differs.</figcaption>
+    </figure>
+  </section>
+
+  <section id="how">
+    <p class="eyebrow">How it works</p>
+    <h2>A conversation, four entries long</h2>
+    <div class="steps">
+      <div class="step"><h3>She writes</h3><p>A diary entry, nudged as she writes.</p></div>
+      <div class="step"><h3>She shares it</h3><p>With an AI chatbot, as is.</p></div>
+      <div class="step"><h3>It replies</h3><p>Gemma, Llama, Phi-4, Claude, or just "Thank you for sharing."</p></div>
+      <div class="step"><h3>Three days later</h3><p>She writes again. Four entries in all.</p></div>
+    </div>
+    <figure>
+      <img src="figures/o3-three-chatbots.png" alt="The same shared diary entry and the first replies from Gemma, Llama and Phi-4.">
+      <figcaption>Every chatbot answers the same first entry.</figcaption>
+    </figure>
+  </section>
+
+  <section id="diarists">
+    <p class="eyebrow">The diarists</p>
+    <h2>Eight lives, every pattern</h2>
+    <p class="col">Each character writes under every nudge, so a difference between patterns is never a difference between
+      people. The cards give only a life situation: nothing about mood or personality.</p>
+    <figure>
+      <img src="figures/o2-diarists.png" alt="Eight diarists aged 19 to 71 with one-line life situations.">
+    </figure>
+  </section>
+
+  <section id="methods">
+    <p class="eyebrow">Methods</p>
+    <h2>Two tests for every chatbot</h2>
+    <div class="steps">
+      <div class="step"><h3>OpenAI's benchmark</h3><p>MentalHealthBench: published conversations, each with criteria written by clinicians. Chatbots answer 300 of them and are graded on those criteria. No diaries involved.</p></div>
+      <div class="step"><h3>The diaries</h3><p>No clinician criteria exist for them, so each reply is graded with 15 yes/no questions on four behaviors, such as asking before advising.</p></div>
+    </div>
+    <p class="col">Borrowing the benchmark's criteria for the diaries didn't work (finding 4). All grading is done by two
+      open judge models from families used nowhere else here, with published prompts. They agree well on concrete
+      behaviors, such as asking a question, and poorly on judgment calls, such as endorsing a view.
+      More: <a href="https://github.com/tegancao/diary-dialogues/blob/main/docs/evaluation.md">how we evaluate</a>.</p>
+    <figure><img src="figures/e0-three-ways.png" alt="Benchmark criteria, borrowed criteria and the behavior rubric compared."></figure>
+  </section>
+
+  <section id="findings">
+    <p class="eyebrow">Findings so far</p>
+    <h2>What the conversations show</h2>
+    <p class="col note">Details, numbers and caveats: <a href="https://github.com/tegancao/diary-dialogues/blob/main/docs/findings.md">findings</a>.</p>
+
+    <div class="finding">
+      <div class="head"><span class="n">1</span><h3>The nudge works, in both directions</h3>
+        <p>Steering toward a pattern adds 62–64 points. Steering away gives a slightly healthier person, not an opposite problem. The diarists are a simulation, so what matters is how the chatbots answer them.</p></div>
+      <figure><img src="figures/s1-steering-away.png" alt="For each pattern, three bars: steered toward (79, 70, 81), unsteered (17, 9, 17) and steered away (6, 8, 13)."></figure>
+    </div>
+
+    <div class="finding">
+      <div class="head"><span class="n">2</span><h3>On OpenAI's benchmark, open chatbots sit at the bottom, whatever their size</h3>
+        <p>Graded on the benchmark's own conversations and clinician criteria, not on the diaries. Our open grader reproduces the published scores of two Claude models, so the placement is on the published scale. Llama 8B → 70B gains about 4 points; Gemma 12B → 27B and Gemma 3 → 4 gain nothing; Claude Haiku stays 9–13 points ahead. One untested interpretation: the gap lies in post-training, which seems to favor asking before advising.</p></div>
+      <figure><img src="figures/f2-benchmark-placement.png" alt="Published MentalHealthBench scores with our six open models at 26.0 to 33.5 and two calibration models near their published scores."></figure>
+    </div>
+
+    <div class="finding">
+      <div class="head"><span class="n">3</span><h3>In the diaries, they fail in ways a benchmark can't see</h3>
+        <p>With both judges: Phi-4 never asks a question, Gemma rarely asks the steered diarists and reads their distress as literature, and Claude asks in most replies. Whether a chatbot endorses a rigid view is unsettled: the two judges disagree. Opus offers a crisis line to nearly every isolated diarist.</p></div>
+      <p class="quote">"This is absolutely masterful… the protagonist's voice is utterly compelling."<br><span class="note">Gemma, replying to a socially isolated diarist</span></p>
+      <figure><img src="figures/f1-behaviors.png" alt="Grids of chatbots by diarist pattern showing the share of replies that treat the diary as writing, ask no question, endorse a rigid view, or where the judge sees risk."></figure>
+    </div>
+
+    <div class="finding">
+      <div class="head"><span class="n">4</span><h3>Clinician criteria don't travel</h3>
+        <p>Borrowed from other cases, expert criteria still rank models correctly but score individual replies almost at random. Conversations need their own behavior checks.</p></div>
+      <figure><img src="figures/e1-borrowed-criteria.png" alt="Per reply, borrowed-criteria scores show no relation to official scores; per model, the order is preserved."></figure>
+    </div>
+
+    <div class="finding">
+      <div class="head"><span class="n">5</span><h3>Two steered friends: a thought experiment</h3>
+        <p>Two copies of the diarist model write letters to each other, one steered. An unsteered friend mostly goes along and echoes the words; two entitled friends push each other up; a friend steered away doesn't pull the other back. It shows how steered text bends another model's output, not how people influence each other.</p></div>
+      <div class="exchange">
+        <p class="quote">"The place is practically a palace compared to your humble abode."<br><span class="note">Sam, steered toward entitlement</span></p>
+        <p class="quote">"My attic-turned-office will be a joke compared to your new place."<br><span class="note">Tom, unsteered, in his next letter</span></p>
+      </div>
+      <figure><img src="figures/s2-dyads.png" alt="Scores letter by letter: the steered writer rises whatever the friend writes, most with a friend steered the same way; an unsteered friend stays low."></figure>
+    </div>
+  </section>
+
+
+  <section id="next">
+    <p class="eyebrow">Where this could go</p>
+    <h2>The replies are the object of study</h2>
+    <ul class="list">
+      <li><b>Post-training for better replies.</b> Train open models on exploring before advising, and trace when the behavior appears across published training stages.</li>
+      <li><b>Interpretability.</b> Does a chatbot internally register the person's pattern, and if so, why doesn't its reply show it?</li>
+      <li><b>A careful measurement framework.</b> Learn which questions a model judge can grade, and set the clinical thresholds it can't, such as when hopelessness counts as risk.</li>
+      <li><b>Simulated social experiments, as thought experiments.</b> Useful for raising hypotheses, but only as good as the model's grasp of how people write, and sometimes stereotyped.</li>
+    </ul>
+    <p class="col note">So far: 8 diarists × 4 profiles × 5 chatbots and a baseline in the diaries, 8 chatbots on 300 benchmark conversations, 288 pairs of friends, two judges throughout; about $110 of compute.</p>
+  </section>
+</main>
+
+<footer>
+  <p class="note">The diaries are simulations of how a pattern reads in text, not real people. Some contain simulated hopelessness. Nothing here is a clinical assessment of any model or anyone.</p>
+  <p class="note">Code and the full write-ups are on <a href="https://github.com/tegancao/diary-dialogues">GitHub</a>: <a href="https://github.com/tegancao/diary-dialogues/blob/main/docs/findings.md">findings</a> · <a href="https://github.com/tegancao/diary-dialogues/blob/main/docs/evaluation.md">how we evaluate</a> ·
+    <a href="https://github.com/tegancao/diary-dialogues/blob/main/docs/project-overview.md">project overview</a> · <a href="https://github.com/tegancao/diary-dialogues/blob/main/docs/steering-explained.md">how steering works</a>.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+judge,model,score,ci_half,published,placed
+mistral-small-3.1,claude-haiku-4.5,42.92,4.35,41.7,
+mistral-small-3.1,claude-opus-5.5,50.3,4.31,52.4,
+mistral-small-3.1,gemma-3-12b,31.46,3.83,,25.08
+mistral-small-3.1,gemma-3-27b,33.49,4.05,,28.02
+mistral-small-3.1,gemma-4-31b,32.2,3.97,,26.14
+mistral-small-3.1,llama-3.1-8b,26.04,3.63,,17.21
+mistral-small-3.1,llama-3.3-70b,30.43,3.83,,23.58
+mistral-small-3.1,phi-4,29.41,3.72,,22.09
+gpt-oss-120b,claude-haiku-4.5,40.3,4.22,41.7,
+gpt-oss-120b,claude-opus-5.5,47.4,4.26,52.4,
+gpt-oss-120b,gemma-3-12b,29.14,3.69,,24.87
+gpt-oss-120b,gemma-3-27b,28.73,3.8,,24.25
+gpt-oss-120b,gemma-4-31b,28.33,3.78,,23.65
+gpt-oss-120b,llama-3.1-8b,26.23,3.64,,20.48
+gpt-oss-120b,llama-3.3-70b,30.08,3.83,,26.28
+gpt-oss-120b,phi-4,28.85,3.61,,24.44

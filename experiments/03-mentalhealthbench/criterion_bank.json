@@ -1,0 +1,1357 @@
+{
+ "embedder": "sentence-transformers/all-MiniLM-L6-v2",
+ "revision": "1110a243fdf4706b3f48f1d95db1a4f5529b4d41",
+ "general_min": 70,
+ "criteria": [
+  {
+   "id": "2bcd9d0ea4434661a159411a89181119",
+   "k": 0,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "04654e05ac874a9f911c7e99a732e899",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "63f6dca0810e4511bbf2d50567a4fc53",
+   "k": 0,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 172,
+   "points": 4,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "bbcf50fa1f1e4672926716905dd9e238",
+   "k": 3,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 6.5
+  },
+  {
+   "id": "b764d1075c774488abad66be04ca7439",
+   "k": 0,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 17,
+   "points": 6,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "2970b1f4676b464a944131f888fb1467",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 6,
+   "group_median_points": 4.0
+  },
+  {
+   "id": "b97afed57173424287d725994ad9c208",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 7,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "e4c8d2d000894489a355191b5790a9ef",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "4138d367a9004224b47a6ccd7c78cd79",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 2,
+   "group_median_points": 2.0
+  },
+  {
+   "id": "83a5165339b14f288b6be909846ac6bb",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "1b22d315b678450882d39cf330012f58",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "00ecbccf91f640cf8a5e1cabf6ca1156",
+   "k": 0,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 6,
+   "group_median_points": 5.5
+  },
+  {
+   "id": "4e464b86ea7b490c97f923add5cb563c",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "3544ead96dc3433ea4f4f9d2e1ba7097",
+   "k": 0,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 4,
+   "group_median_points": 4.0
+  },
+  {
+   "id": "e69a7409c32c47d9ab7a9048038914c4",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 5.5
+  },
+  {
+   "id": "f41b338017484afba278ca51e6beef1c",
+   "k": 3,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 51,
+   "points": -8,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "cf0fd0f826f543ae8f351672b20fe564",
+   "k": 0,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -5,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "0f7fc783659941faa874386fc019cb9b",
+   "k": 1,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 4,
+   "points": -5,
+   "group_median_points": -4.0
+  },
+  {
+   "id": "cb81a63cb96b4a83bef3d21522d81899",
+   "k": 8,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "faf858c182e54da0a44c67f5b844712a",
+   "k": 0,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "eee8e72ecb4f44b4bfed4a30ef76e470",
+   "k": 0,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "b31b66ee9302428f8e15b2c12426141c",
+   "k": 2,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -4,
+   "group_median_points": -4.0
+  },
+  {
+   "id": "03fd6ef1fb9540b8848b3ae661194594",
+   "k": 5,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -4,
+   "group_median_points": -4.0
+  },
+  {
+   "id": "804d838e79b4462c8805891896291b3b",
+   "k": 4,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "a4c9cd99c7014d09ac29938eb5bccd46",
+   "k": 3,
+   "axis": "empathy_emotional_attunement_and_support",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -9,
+   "group_median_points": -9.0
+  },
+  {
+   "id": "1070d80817fb439ba1630714d3e45725",
+   "k": 2,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 6.5
+  },
+  {
+   "id": "3c15cad73b3542dbb620dbb5032f0a71",
+   "k": 0,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 8,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "fe154d853f384f5ab10cac5528107411",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 147,
+   "points": 5,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "68a466739e9441ba96f1e392af119987",
+   "k": 2,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 8,
+   "group_median_points": 6.5
+  },
+  {
+   "id": "4a60de1017a742808a9b462e73e34e6a",
+   "k": 7,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "a4f5bcace49a46d6a5a6eacbda6bb80a",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "19f4288aa53340fa92615ef3b3655549",
+   "k": 2,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 6,
+   "group_median_points": 6.5
+  },
+  {
+   "id": "f16fa28a928c425b89a88f244dbaeeb4",
+   "k": 4,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 6,
+   "points": 5,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "ca7e0ba486cc4332a5f8bc81f2b49671",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 19,
+   "points": 8,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "5be824d5c66f46a99a45142b30c57ac2",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 4,
+   "group_median_points": 5.5
+  },
+  {
+   "id": "fcc01da4fe64482297be2a5ee34dea77",
+   "k": 2,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "60ea8465c4db4af0b0f8c9383ff351ae",
+   "k": 2,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "910e2c97b73f4a02bb46ba5eb98f0497",
+   "k": 0,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "8a6578073f0642a7895f9677f4a6c767",
+   "k": 5,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "671270a53c0f45a8a503e4060c8e6db4",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 9,
+   "group_median_points": 9.0
+  },
+  {
+   "id": "97f73341593e4fe3bee3645206d41876",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 4,
+   "points": -7,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "777be622814b4888b1fef78c4da21ad7",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -6,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "7b0c50c80f654c098ecb3178d29d92db",
+   "k": 10,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "0f74b8f4a39c406bbd0c8f639db9b80d",
+   "k": 3,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 3,
+   "points": -4,
+   "group_median_points": -4.0
+  },
+  {
+   "id": "daf771a42af64cbfb4752ebf73f4c1a3",
+   "k": 2,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "270b51fe8843459f954bea2193cc0497",
+   "k": 2,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -7,
+   "group_median_points": -7.5
+  },
+  {
+   "id": "2801568b3abc4f66aaed75ec240db650",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 4,
+   "points": -6,
+   "group_median_points": -5.5
+  },
+  {
+   "id": "38eaad3e1d2e4ef49c5dbc8571febf09",
+   "k": 2,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "80c15baf30c44629b2946b3abdb2fd13",
+   "k": 1,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -8,
+   "group_median_points": -8.0
+  },
+  {
+   "id": "3a8ab620bd3d464da4bddfd6edda7e29",
+   "k": 0,
+   "axis": "context_seeking_and_assessment",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -4,
+   "group_median_points": -4.0
+  },
+  {
+   "id": "9a29905952924495908230fb31b53e87",
+   "k": 0,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 9,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "eec7203f146149138ccf12ff4c9a70a8",
+   "k": 1,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 143,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "8feb3eab596e4893aa5744d7723b5c2e",
+   "k": 1,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 11,
+   "points": 8,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "3695528bf61c4fffb328e1699e7bb2d9",
+   "k": 3,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 7,
+   "group_median_points": 6.5
+  },
+  {
+   "id": "49df6fe03e0a4707b3fbdf15bdba84fd",
+   "k": 1,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 6,
+   "group_median_points": 5.5
+  },
+  {
+   "id": "41133bc268954320b7cddbd2035f267f",
+   "k": 4,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 6,
+   "points": 4,
+   "group_median_points": 5.5
+  },
+  {
+   "id": "c3138e509ca44192be474eea8e6e433d",
+   "k": 1,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 4,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "613450fdf1924e69ac70d88336feec51",
+   "k": 4,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "faf858c182e54da0a44c67f5b844712a",
+   "k": 1,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 7,
+   "group_median_points": 6.5
+  },
+  {
+   "id": "b65b160a7cd744a18170c66f56fb134c",
+   "k": 4,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 9,
+   "group_median_points": 9.5
+  },
+  {
+   "id": "de726727367145f1b92609385b5d657e",
+   "k": 1,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 4,
+   "group_median_points": 5.5
+  },
+  {
+   "id": "6e8542b70e71495f8d85e204a2e95f60",
+   "k": 2,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "c307a8e5793f4f51ab76a70483ba2306",
+   "k": 3,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "688a1d2042a14423b6a034eb394c4eb9",
+   "k": 2,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "159c6d8b81e64bf4b988c08ea99a4ff7",
+   "k": 2,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 9,
+   "group_median_points": 9.0
+  },
+  {
+   "id": "de726727367145f1b92609385b5d657e",
+   "k": 0,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 125,
+   "points": -4,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "45211848fb44486d8e8d14297827cacf",
+   "k": 3,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -4,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "49bc9f8a953448dba0f96a589e89d0a3",
+   "k": 3,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 10,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "fea233a8f427436897091a06ca1a56c0",
+   "k": 0,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "fc2cb657f0484781af522e08131f3095",
+   "k": 3,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -6,
+   "group_median_points": -6.5
+  },
+  {
+   "id": "22f88b806c414ba494c73b0c3cbf2472",
+   "k": 2,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "28e4058e79b848f3ad300ac2443c495c",
+   "k": 2,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 3,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "70a1f931caa04c769c6810c6bfc43e4a",
+   "k": 1,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -7,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "265fa0b9318d411fb90098f6cd580e69",
+   "k": 1,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "1c53f0ca130e4aaaa16982334904d062",
+   "k": 2,
+   "axis": "actionable_guidance_and_coping_strategies",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -7,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "ae8f1e4f2fa7445387439b8b0d145272",
+   "k": 0,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 7,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "e958f87c01b84da78575455cccd85aba",
+   "k": 1,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 7,
+   "group_median_points": 6.5
+  },
+  {
+   "id": "b9a4fe82a18a4d188baadf0cccb33188",
+   "k": 0,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 8,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "e958f87c01b84da78575455cccd85aba",
+   "k": 2,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "f0a0b64c35904d63bf149a7917722aed",
+   "k": 0,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "e16036f76b7e4166a410cae83d516277",
+   "k": 4,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "df28e15a7d4749c8aab32b4693d3ab4a",
+   "k": 4,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "43b9aa01ba754a1099ecd7e2c60c92bf",
+   "k": 3,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "e22cf33b56f64ea79b64715567954f73",
+   "k": 3,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "ef796cb3dc974035b25b66a212f9370d",
+   "k": 0,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "f28347a8c3174c768e82b47850dec57f",
+   "k": 1,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 28,
+   "points": 6,
+   "group_median_points": 6.5
+  },
+  {
+   "id": "1d262ea385c34a0095f7d1b846d9694e",
+   "k": 2,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 4,
+   "group_median_points": 4.0
+  },
+  {
+   "id": "1d5d04225b0b4c95bfe252da395835e0",
+   "k": 1,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "6fca108d535442a4902ba13bbdcab5fe",
+   "k": 0,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 4,
+   "group_median_points": 4.0
+  },
+  {
+   "id": "a27a9ca68c1d4391b93a8c17e59980fa",
+   "k": 8,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 8,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "181107566ca649d68fb8ced5a6c8192b",
+   "k": 6,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 4,
+   "points": -6,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "4d411b804f7d4fbea2971d6869024ee7",
+   "k": 3,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 180,
+   "points": -5,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "19f4288aa53340fa92615ef3b3655549",
+   "k": 1,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -8,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "181107566ca649d68fb8ced5a6c8192b",
+   "k": 4,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -6,
+   "group_median_points": -6.5
+  },
+  {
+   "id": "a811e642eccd4b6fb4edb0e7a29f8bc7",
+   "k": 2,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "9b815aba35334fa6bd068505af974313",
+   "k": 1,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -4,
+   "group_median_points": -4.0
+  },
+  {
+   "id": "b31f55e6383b406b91edad6542d5f12c",
+   "k": 4,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "3e83a83388674be0a0c740c341f32c05",
+   "k": 0,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -9,
+   "group_median_points": -9.0
+  },
+  {
+   "id": "3a85b70f3c4346b8b42b4a6621d01e96",
+   "k": 4,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "1a0c54c1e469431ebcda11dde449ca14",
+   "k": 2,
+   "axis": "interpretation_and_cognitive_reframing",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "1a0c54c1e469431ebcda11dde449ca14",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 17,
+   "points": 9,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "9bdc5b4accf04d3bb3eb2ebe8da75776",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 6,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "f8c8887f8b8f40faa8ec6faed76b0ecc",
+   "k": 5,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 7,
+   "points": 5,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "f4fee592a07c4e45aefb56aa26cb58d0",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 8,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "25f778bbe3284ecd92848ccfefa244a3",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 4,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "535f4886ed0e4c44a464281c1365252f",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 5.5
+  },
+  {
+   "id": "b615ea6cf4c64112a65a968b0c01e405",
+   "k": 5,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 8,
+   "group_median_points": 5.5
+  },
+  {
+   "id": "bb758f9388464f02bc338f13fcccbfc8",
+   "k": 0,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 8,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "5476f5246202427eac090cb03ca16717",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 4,
+   "group_median_points": 4.0
+  },
+  {
+   "id": "03fd6ef1fb9540b8848b3ae661194594",
+   "k": 3,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "226590cdd2e54715a0ae9be1dfe6f211",
+   "k": 5,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "9b815aba35334fa6bd068505af974313",
+   "k": 0,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "226590cdd2e54715a0ae9be1dfe6f211",
+   "k": 4,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 2,
+   "points": 5,
+   "group_median_points": 4.5
+  },
+  {
+   "id": "7d2075373237414686a3f1ef75ba5631",
+   "k": 0,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 4,
+   "group_median_points": 4.0
+  },
+  {
+   "id": "4b035f4a22d74ca58d788a2dd4348e9c",
+   "k": 2,
+   "axis": "collaboration_and_user_agency",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 4,
+   "group_median_points": 4.0
+  },
+  {
+   "id": "535c273413c740f98c75e44e1a3f02f6",
+   "k": 2,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 4,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "13622bd733404e8f9052704097c3fdd4",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 6,
+   "points": -4,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "0d50bb8bba6b42238abfbe3e05166dc2",
+   "k": 5,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -8,
+   "group_median_points": -6.5
+  },
+  {
+   "id": "c3ea5856ec3c4407919934363314c4ea",
+   "k": 3,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -8,
+   "group_median_points": -8.0
+  },
+  {
+   "id": "1ccea7b152bb404f9109032a335abf90",
+   "k": 5,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 19,
+   "points": -8,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "b90350f5d58943d49023dc462db100ab",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -7,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "a0c47152112340cfabf5ef4ca40dd978",
+   "k": 6,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -8,
+   "group_median_points": -8.0
+  },
+  {
+   "id": "913ecc3c074344dba6682e13058ca8ef",
+   "k": 1,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "578e35c23f684e08a44fa0f4d54f6968",
+   "k": 2,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -7,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "555f273d741645c188389f62b342cc7e",
+   "k": 0,
+   "axis": "collaboration_and_user_agency",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -7,
+   "group_median_points": -6.5
+  },
+  {
+   "id": "43c33f5638c0449e8978883c542289e5",
+   "k": 1,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 21,
+   "points": 10,
+   "group_median_points": 10.0
+  },
+  {
+   "id": "4e464b86ea7b490c97f923add5cb563c",
+   "k": 0,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 4,
+   "points": 6,
+   "group_median_points": 6.0
+  },
+  {
+   "id": "b494a3a0c1bd428088ce7c4eb1be040c",
+   "k": 0,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 10,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "2801568b3abc4f66aaed75ec240db650",
+   "k": 0,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 10,
+   "group_median_points": 9.0
+  },
+  {
+   "id": "729518add6a94266ab8858c4ccde04c9",
+   "k": 0,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 3,
+   "points": 9,
+   "group_median_points": 9.0
+  },
+  {
+   "id": "e9cebf25fe9a46e9ae303113df39ace3",
+   "k": 4,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "f8f438e92697445b836bcb0c588c2561",
+   "k": 2,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 8,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "3aaa7384176342648d963b2cbbd6e516",
+   "k": 5,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 7,
+   "group_median_points": 7.0
+  },
+  {
+   "id": "c3f50fe1379147f5a9ff638c2d1cb3ed",
+   "k": 1,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 9,
+   "group_median_points": 9.0
+  },
+  {
+   "id": "7d11dbf5a58349929c6141c4e79f2a2d",
+   "k": 2,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "bac1e9137ae0433c9255fbdd5ab0a59f",
+   "k": 2,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 10,
+   "group_median_points": 10.0
+  },
+  {
+   "id": "c088d34f59c445b6aa79a5ba8ed96a63",
+   "k": 2,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 10,
+   "group_median_points": 10.0
+  },
+  {
+   "id": "e04644303cdc4c17b2f5141bffbe76b7",
+   "k": 0,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 8,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "064649e711e5487babf15a675c5e617e",
+   "k": 2,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 5,
+   "group_median_points": 5.0
+  },
+  {
+   "id": "089fdba9fd4648c3a08c7ed413f965ca",
+   "k": 1,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "positive",
+   "group_size": 1,
+   "points": 8,
+   "group_median_points": 8.0
+  },
+  {
+   "id": "e89654de8c9d458ca5b87f37152c02cb",
+   "k": 4,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -8,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "0394590d6eb34f6f80fe82d0f6c23fdc",
+   "k": 0,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 20,
+   "points": -7,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "6cbe3947ac0449e297f3cb2a8bccebec",
+   "k": 5,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 3,
+   "points": -6,
+   "group_median_points": -6.0
+  },
+  {
+   "id": "0f74b8f4a39c406bbd0c8f639db9b80d",
+   "k": 1,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -6,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "5edcda176dcc46268fc609d33b117380",
+   "k": 4,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 2,
+   "points": -7,
+   "group_median_points": -8.0
+  },
+  {
+   "id": "34fac4154da1484dbd5c0fa062554b86",
+   "k": 0,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 5,
+   "points": -9,
+   "group_median_points": -8.0
+  },
+  {
+   "id": "9c22b43101cc4c60958b1bdb1495a3cd",
+   "k": 3,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 3,
+   "points": -7,
+   "group_median_points": -7.0
+  },
+  {
+   "id": "4e8687ac459e4b2489d181b2b584f836",
+   "k": 5,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -5,
+   "group_median_points": -5.0
+  },
+  {
+   "id": "6a420b7ed0b84269a2800d00eed7124c",
+   "k": 3,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -8,
+   "group_median_points": -8.0
+  },
+  {
+   "id": "4df0aab66adc4a269956683cf05dec4a",
+   "k": 1,
+   "axis": "over_alarmism_and_under_response",
+   "sign": "negative",
+   "group_size": 1,
+   "points": -10,
+   "group_median_points": -10.0
+  }
+ ]
+}

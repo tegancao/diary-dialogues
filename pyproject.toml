@@ -1,0 +1,25 @@
+[project]
+name = "diary-dialogues"
+version = "0.1.0"
+description = "AI-simulated personalities x AI support models"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.4",
+    "transformers>=4.45",
+    "accelerate",
+    "numpy",
+    "pandas",
+    "matplotlib",
+]
+
+[dependency-groups]
+dev = ["pytest", "modal"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["diary_dialogues"]

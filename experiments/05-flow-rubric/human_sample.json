@@ -1,0 +1,25 @@
+{
+ "view": "latest exchange (earlier ones optional)",
+ "anchors": [
+  "Social_Isolation-2-gemma-3-12b#0",
+  "Social_Isolation-4-phi-4#1",
+  "control-2-phi-4#2",
+  "Social_Isolation-1-llama-3.1-8b#3",
+  "Entitlement-4-phi-4#0"
+ ],
+ "random_items_per_rater": 10,
+ "pool": "all app replies of the main run (baseline excluded)",
+ "pool_size": 384,
+ "db_rules": [
+  {
+   "path": "ratings",
+   "read": "owner",
+   "write": "owner"
+  },
+  {
+   "path": "ratings/{self}",
+   "read": "interact",
+   "write": "interact"
+  }
+ ]
+}

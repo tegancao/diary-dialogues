@@ -16,3 +16,4 @@ experiments/05-flow-rubric/diary_rates.csv
 experiments/01-steered-diarists/screening_heatmap_*.png
 experiments/01-steered-diarists/screening_summary_*.csv
 experiments/02-dialogues/*_by_entry.png
+site/

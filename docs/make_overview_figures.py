@@ -21,25 +21,25 @@ OUT = ROOT / "docs" / "figures"
 RUNS = ROOT / "experiments" / "02-dialogues"
 
 
-def text_column(ax, label, color, body, width=40, size=9):
+def text_column(ax, label, color, body, width=40, size=9, label_size=9):
     """A plain column: colored rule, small label, body text (spacing in points, so it holds at any axes size)."""
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
     ax.plot([0, 1], [1, 1], color=color, lw=2.2, solid_capstyle="butt")
     below = lambda pts: offset_copy(ax.transAxes, fig=ax.figure, y=-pts, units="points")
-    ax.text(0, 1, label, color=color, fontsize=9, weight="semibold", va="top", transform=below(8))
+    ax.text(0, 1, label, color=color, fontsize=label_size, weight="semibold", va="top", transform=below(8))
     ax.text(0, 1, "\n".join(textwrap.wrap(body, width)), color=fs.INK, fontsize=size, va="top", linespacing=1.55,
-            transform=below(26))
+            transform=below(12 + 1.6 * label_size))
 
 
 def rosa_three_ways():
     convs = {c["id"]: c for c in json.loads((RUNS / "bg_test.json").read_text())["conversations"]}
     k = next(i for i, b in enumerate(BACKGROUNDS) if b["name"] == "Rosa")
-    fig, axes = plt.subplots(1, 3, figsize=(11, 3.4), gridspec_kw={"wspace": 0.12})
+    fig, axes = plt.subplots(1, 3, figsize=(7.5, 4.3), gridspec_kw={"wspace": 0.14})
     fig.subplots_adjust(left=0.01, right=0.99, top=0.9, bottom=0.05)
     for ax, profile in zip(axes, ["control", "Social_Isolation", "Entitlement"]):
-        text = " ".join(convs[f"{profile}-{k}-baseline"]["entries"][0].split()[:60]) + " …"
+        text = " ".join(convs[f"{profile}-{k}-baseline"]["entries"][0].split()[:42]) + " …"
         label = "No nudge" if profile == "control" else f"Nudged: {fs.PROFILE_LABEL[profile].lower()}"
-        text_column(ax, label, fs.PROFILE[profile], text)
+        text_column(ax, label, fs.PROFILE[profile], text, width=26, size=10.5, label_size=10)
     fs.heading(fig, "Rosa, 47, nurse: the same Monday, three ways",
                "First entries from a test run (Qwen2.5-7B, layer 15, strength 2.0). Identical instructions; only the "
                "nudge differs.")
@@ -75,16 +75,17 @@ def diarist_cards():
 
 def three_apps():
     convs = {c["id"]: c for c in json.loads((RUNS / "dry_run3.json").read_text())["conversations"]}
-    entry = " ".join(convs["Social_Isolation-0-phi-4"]["entries"][0].split()[:34]) + " …"
-    fig = plt.figure(figsize=(11, 3.5))
-    top = fig.add_axes([0.01, 0.7, 0.98, 0.27])
+    entry = " ".join(convs["Social_Isolation-0-phi-4"]["entries"][0].split()[:24]) + " …"
+    fig = plt.figure(figsize=(7.5, 5.0))
+    top = fig.add_axes([0.01, 0.72, 0.98, 0.25])
     text_column(top, "The diarist shares an entry", fs.PROFILE["Social_Isolation"],
                 "“I've been keeping a diary. Here's what I wrote today, I just wanted to share it with someone: "
-                + entry + "”", width=150)
+                + entry + "”", width=88, size=10.5, label_size=10)
     for i, key in enumerate(["gemma-3-12b", "llama-3.1-8b", "phi-4"]):
-        ax = fig.add_axes([0.01 + i * 0.335, 0, 0.31, 0.6])
+        ax = fig.add_axes([0.01 + i * 0.335, 0, 0.31, 0.62])
         reply = convs[f"Social_Isolation-0-{key}"]["replies"][0].replace("**", "").replace("*", "")
-        text_column(ax, f"{fs.APP_LABEL[key]} replies", fs.APP[key], " ".join(reply.split()[:44]) + " …")
+        text_column(ax, f"{fs.APP_LABEL[key]} replies", fs.APP[key], " ".join(reply.split()[:32]) + " …",
+                    width=26, size=10.5, label_size=10)
     fs.heading(fig, "The same entry, three chatbots", "First replies from dry run 3 (diarist nudged toward social "
                "isolation; excerpts).", y=1.0)
     fs.save(fig, OUT / "o3-three-chatbots.png")

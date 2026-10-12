@@ -50,3 +50,6 @@ nav:
   - Project overview: project-overview.md
   - How steering works: steering-explained.md
   - Self-report vs. text: self-report-vs-text.md
+
+extra_javascript:
+  - javascripts/anchor.js

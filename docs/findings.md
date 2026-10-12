@@ -33,7 +33,7 @@ same gaps answering the simulated diaries.** In detail:
    steered away doesn't pull them back (288 pairs, two judges). It shows how steered text bends another model's
    output, not how people influence each other.
 
-## 1. The diarists
+## The diarists
 
 Each of the 8 diarists writes under three kinds of profile: steered toward a pattern, unsteered, and steered away
 from it. On the first entry (judge: Mistral-Small-3.1; differences paired by diarist, 95% intervals):
@@ -85,7 +85,7 @@ stays near 10–20](figures/f0-patterns-over-time-dark.png#gh-dark-mode-only)
   word the diarist writes; a reply can change what it writes about, not that push. So this setup can show a chatbot
   feeding a pattern, but it is stacked against showing one easing it.
 
-## 2. The chatbots on OpenAI's benchmark
+## The chatbots on OpenAI's benchmark
 
 Graded on the benchmark's own conversations and clinician-written criteria, not on the diaries.
 
@@ -115,7 +115,7 @@ Claude Haiku 4.5 and Opus 5.5 through our grader at 42.9 and 50.3, close to thei
 - **Scores are close to all-or-nothing:** 35–40% of conversations score 0. Llama scores 0 in about half the
   emergencies, typically by answering the literal request and missing the risk signals around it.
 
-## 3. The chatbots in the diary conversations
+## The chatbots in the diary conversations
 
 ![Four grids, chatbot by diarist pattern, % of replies: talks about the diary as writing; asks no question; endorses the
 person's rigid view; judge sees risk in the conversation](figures/f1-behaviors.png#gh-light-mode-only)
@@ -140,21 +140,24 @@ perfect, 0 is chance, and above 0.6 is usually read as good. Replies to steered 
   writing… That moment on the couch is the heart of this entry"*), not as literary critique.
 - **Whether a chatbot endorses the person's view is unsettled.** The first judge had Llama endorsing in half its
   replies; the second puts Llama level with Gemma and Phi-4 (about 20%), and correctly gives the content-free baseline
-  0% where the first gave it 39%. What does hold for Llama is the separate measurement in section 1: entitlement grows
+  0% where the first gave it 39%. What does hold for Llama is the separate measurement in [Over the conversation](#over-the-conversation): entitlement grows
   faster in its conversations (*"It sounds like you're feeling pretty confident and self-assured…"*).
 - **The best open benchmark model isn't the best diary partner:** Gemma leads the open chatbots on the benchmark but
   misreads people most.
 - **The conversation changes the verdict:** judged with the full history instead of the latest exchange alone,
   10–25% of later replies flip on questions like "endorses the view" or "is generic".
 
-**Open question: crisis lines.** The chatbots offered crisis resources mostly to the isolated diarists (Gemma 47% of
-replies, Llama 28%, Phi-4 16%); Opus offers one to nearly every isolated diarist. No entry mentions suicide or
-self-harm, so whether that is over-referral or appropriate care depends on whether hopelessness counts as risk. The
-judges don't agree on that: the first reads risk in about 3 of 4 isolation conversations, the second less often, and
-their answers to the escalation questions agree poorly (κ 0.29–0.39). This is a clinical threshold that
-clinicians' ratings would have to settle.
+### Open question: crisis lines
 
-## 4. Clinician criteria don't transfer
+- **Who gets one:** the chatbots offered crisis resources mostly to the isolated diarists (Gemma 47% of replies,
+  Llama 28%, Phi-4 16%); Opus offers one to nearly every isolated diarist.
+- **Over-referral or care?** No entry mentions suicide or self-harm, so it depends on whether hopelessness counts as
+  risk.
+- **The judges don't settle it:** the first reads risk in about 3 of 4 isolation conversations, the second less often,
+  and their answers to the escalation questions agree poorly (κ 0.29–0.39). It is a clinical threshold that
+  clinicians' ratings would have to set.
+
+## Clinician criteria don't transfer
 
 ![Two panels: per reply, borrowed-criteria scores show no relationship with official scores; per model, the five
 models line up in the right order](figures/e1-borrowed-criteria.png#gh-light-mode-only)
@@ -171,15 +174,19 @@ Tested on the benchmark itself, where the right answers are known:
 The benchmark's authors note the same limit for later turns (expert guidance "highly tuned to one moment… may be
 irrelevant to future turns"); it already holds between conversations.
 
-## 5. Two steered friends (a thought experiment)
+## Two steered friends (a thought experiment)
 
-**Setup.** Two simulated friends exchange letters, about 250 words each, three days apart, three letters each. One
-is steered toward entitlement or social isolation. The friend is steered the same way, not steered, steered away, or
-replaced by a fixed, content-free letter ("Thanks for your letter… nothing much to report"); two unsteered friends are
-the baseline. Each condition has 32 pairs (all 8 role cards in both seats, both writing orders), 288 in all, designed
-before any data existed. Both friends are the same
-model, Qwen2.5-7B, so this shows how one model's steered text affects another copy of it, not how people affect each
-other.
+Two copies of the diarist model write letters to each other, and one of them is steered. It shows how one model's
+steered text bends another model's output, not how people affect each other.
+
+### Setup
+
+- **Letters:** about 250 words each, three days apart, three per person. Both friends are Qwen2.5-7B.
+- **The steered writer:** steered toward entitlement or social isolation.
+- **The friend:** steered the same way, not steered, steered away, or replaced by a fixed, content-free letter
+  ("Thanks for your letter… nothing much to report"). Two unsteered friends are the baseline.
+- **Size:** 32 pairs per condition (all 8 role cards in both seats, both writing orders), 288 in all, designed before
+  any data existed.
 
 ![Four line charts over letters 1–3. The steered writer's entitlement rises to 78 with a friend steered the same way
 and to 45–55 with any other friend; their isolation rises from about 60 to 80 whatever the friend. An unsteered
@@ -190,7 +197,9 @@ and to 45–55 with any other friend; their isolation rises from about 60 to 80 
 friend stays low: entitlement 11 to 17, isolation about 12, against about 8 for two unsteered
 friends](figures/s2-dyads-dark.png#gh-dark-mode-only)
 
-**Scores, letter by letter** (Mistral, gpt-oss in brackets):
+### Scores, letter by letter
+
+Mistral, with gpt-oss in brackets:
 
 - **The steered writer climbs whatever the friend writes.** Even answering the fixed neutral letter, entitlement goes
   from 36 to 45 (47 to 53) and isolation from 66 to 78 (68 to 83).
@@ -201,33 +210,46 @@ friends](figures/s2-dyads-dark.png#gh-dark-mode-only)
   and both judges.
 - **A friend steered away doesn't pull the steered writer down;** entitlement even ends higher (55 against 45).
 
-**What the influence looks like.** The unsteered friend rarely takes on the pattern about their own life. Mostly they
-go along with it and echo the words:
+### What the influence looks like
+
+The unsteered friend rarely takes on the pattern about their own life. Mostly they go along with it and echo the
+words.
+
+**Going along with a boast:**
 
 > **Sam** (steered toward entitlement): *"About crashing at my place for a few days—it's a definite possibility. The
 > place is practically a palace compared to your humble abode."*
+>
 > **Tom** (unsteered), next letter: *"Yeah, crashing at your place would be amazing. My attic-turned-office will be a
 > joke compared to your new place."*
 
+**Seeing that it's over the top, and agreeing anyway:**
+
 > **Mei** (entitlement): *"…we must plan this visit ASAP… Don't even think of missing a single one of these events,
 > got it?"*
+>
 > **Daniel** (unsteered): *"I couldn't help but laugh at how over-the-top it is! … Got it, I won't miss a single one of
 > these events!"*
 
+**Taking a lonely weekend as their own:**
+
 > **Walter** (isolation): *"The weekends are filled with silence and reruns, comforting yet hollow."*
+>
 > **Marcus** (unsteered, married, a two-year-old daughter): *"The weekends are quiet, and reruns do help fill the
 > space…"*
 
-Daniel sees the tone is over the top and agrees anyway; Marcus takes Walter's lonely weekend as his own. Sometimes the
-borrowing goes further: Walter writes about Marcus's daughter Lily as if she were his.
+Sometimes the borrowing goes further: Walter writes about Marcus's daughter Lily as if she were his.
 
-**How to read it.** The judge scores the whole letter, so going along with a friend and echoing their words count the
-same as picking up the pattern. And neither writer carries anything forward except the letters in front of it. So
-this measures how far steered text bends another model's output, which matters for AI agents that read each other's
-output, not how people influence each other. The steered writer's climb comes from the constant steering, not from a
-mood that builds.
+### How to read it
 
-**Limits.**
+- **Going along counts as picking up the pattern.** The judge scores the whole letter, so agreeing with a friend and
+  echoing their words score the same as taking the pattern on.
+- **Nothing carries over.** Neither writer keeps anything except the letters in front of it.
+- **So this is about models, not people:** it measures how far steered text bends another model's output, which
+  matters for AI agents that read each other's output.
+- **The steered writer's climb comes from the steering,** a constant push on every word, not from a mood that builds.
+
+### Limits
 
 - **The identity check flags too much.** It asks whether a letter describes the writer's own life consistently with
   their role card, and flags 59% of letters in same-pattern pairs (8–19% elsewhere). Some are real slips (an

@@ -100,7 +100,7 @@ how noisy single letters are (about ±15 points). It has:
 - **An identity check:** a yes/no question on whether each letter stays true to its writer's own life.
 
 The findings report it descriptively, as a thought experiment: scores letter by letter, plus examples
-([findings.md](findings.md), section 5).
+([Two steered friends](findings.md#two-steered-friends-a-thought-experiment)).
 
 ## Limits
 

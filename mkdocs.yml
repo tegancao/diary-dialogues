@@ -43,6 +43,9 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
 
+validation:
+  anchors: warn      # a link to a missing section fails the strict build
+
 nav:
   - Home: index.md
   - Findings: findings.md

@@ -16,7 +16,14 @@ entitlement](figures/o1-rosa-three-ways-dark.png#gh-dark-mode-only)
 
 ## Read more
 
-- [Findings](findings.md): how we test, the results, limits, and compute
+- [Findings](findings.md)
+    - [How we test](findings.md#how-we-test) · [In brief](findings.md#in-brief)
+    - [The diarists](findings.md#the-diarists)
+    - [The chatbots on OpenAI's benchmark](findings.md#the-chatbots-on-openais-benchmark)
+    - [The chatbots in the diary conversations](findings.md#the-chatbots-in-the-diary-conversations)
+    - [Clinician criteria don't transfer](findings.md#clinician-criteria-dont-transfer)
+    - [Two steered friends (a thought experiment)](findings.md#two-steered-friends-a-thought-experiment)
+    - [Limitations](findings.md#limitations) · [Compute](findings.md#compute)
 - [Future work](findings.md#future-work): human ratings, post-training, interpretability, measurement
 - [How we evaluate](evaluation.md): the judges, the benchmark, the behavior rubric
 - [Project overview](project-overview.md): the diarists, how a conversation works, the set-up

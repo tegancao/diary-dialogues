@@ -10,7 +10,7 @@ The method and the schema vectors come from Zhang et al. (2026), who extracted v
 Qwen2.5-7B-Instruct ([data, CC BY 4.0](https://doi.org/10.5281/zenodo.21715792)). Everything measured on this page
 is from our own runs and can be regenerated (see [Reproduce](#reproduce)).
 
-## 1. How a language model writes, one token at a time
+## How a language model writes, one token at a time
 
 A language model writes text one **token** (a word or part of a word) at a time. To choose the next token, it
 passes everything written so far through a stack of identical **blocks**. Qwen2.5-7B has 28 of them.
@@ -30,7 +30,7 @@ Two facts matter for steering:
   block is seen by all the blocks after it.
 - **A hidden state is a point in a 3,584-dimensional space.** Directions in that space can mean something.
 
-## 2. The idea: concepts as directions
+## The idea: concepts as directions
 
 The **linear representation hypothesis** says that many concepts the model uses (sentiment, formality, a persona)
 correspond to **directions** in this space. If the text is more perfectionistic, the hidden states sit a bit further
@@ -42,7 +42,7 @@ along a "perfectionism" direction. If such a direction exists, two things follow
 
 Steering is the second idea. The paper tested both.
 
-## 3. How the schema vectors were made
+## How the schema vectors were made
 
 Zhang et al. used **contrastive activation addition**. For each of the 18 schemas:
 
@@ -82,7 +82,7 @@ is the output of block *l*). The vectors get longer in deeper layers, because hi
 ![Line chart: the length of three schema vectors rises from near 0 at layer 0 to about 8–16 at layer 15 and
 60–70 at the last layer](figures/2-vector-length-by-layer-dark.png#gh-dark-mode-only)
 
-## 4. How we apply a vector
+## How we apply a vector
 
 While the diarist writes, we add a scaled copy of the vector to the hidden state coming out of one block:
 
@@ -139,7 +139,7 @@ it](figures/4-size-of-the-nudge.png#gh-light-mode-only)
 ![Bar chart: the layer-15 hidden state has length 68.8; the nudge 2 × vector has length 16.4, about 24% of
 it](figures/4-size-of-the-nudge-dark.png#gh-dark-mode-only)
 
-## 5. What it does to the writing
+## What it does to the writing
 
 **The first word barely changes.** Unsteered, Qwen begins its diary with "Today" 97.5% of the time; steered, 96.5%.
 The effect comes from small pushes on every token that add up.
@@ -164,7 +164,7 @@ random seed. They start word for word the same, then diverge:
   professionally have given me a boost of confidence."
 
 **Reading the diaries back.** We then fed each diary back into Qwen *without* steering and measured, token by token,
-how far the layer-15 hidden state lies along the unrelenting-standards direction (the "reading" idea from section 2).
+how far the layer-15 hidden state lies along the unrelenting-standards direction (the "reading" idea from [The idea](#the-idea-concepts-as-directions)).
 The steered diaries sit clearly higher, so the schema is now in the text itself, not just in the nudge. This
 matters later: a reply to the diary is responding to text that genuinely carries the schema.
 
@@ -176,7 +176,7 @@ diaries (mean −3.3)](figures/5-projection-per-token-dark.png#gh-dark-mode-only
 (The values are negative throughout because a direction has no natural zero; what carries meaning is the difference
 between the two groups, and changes over time.)
 
-## 6. Limits to keep in mind
+## Limits to keep in mind
 
 - **The vectors overlap.** Many schema vectors point in similar directions. Abandonment, defectiveness and
   pessimism, for example, share a general "negative mood" component, and in our pilots steering toward abandonment
@@ -200,11 +200,11 @@ between the two groups, and changes over time.)
 
 ```bash
 uv run python scripts/download_data.py                                      # schema vectors and judge prompts (Zenodo)
-uv run --with modal modal run experiments/01-steered-diarists/steering_demo.py   # sections 4–5 measurements (1 GPU, ~$0.10)
+uv run --with modal modal run experiments/01-steered-diarists/steering_demo.py   # measurements in "How we apply a vector" and "What it does to the writing" (1 GPU, ~$0.10)
 uv run python docs/make_steering_figures.py                                 # all figures on this page
 ```
 
-The screening diaries quoted in section 5 come from `experiments/01-steered-diarists/screening.py`.
+The screening diaries quoted in [What it does to the writing](#what-it-does-to-the-writing) come from `experiments/01-steered-diarists/screening.py`.
 
 **Source:** Zhang et al. (2026), activation steering of early maladaptive schemas in Qwen2.5-7B-Instruct; code
 Apache-2.0, data CC BY 4.0. Contrastive activation addition: Rimsky et al., *Steering Llama 2 via Contrastive

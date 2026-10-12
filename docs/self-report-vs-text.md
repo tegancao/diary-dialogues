@@ -36,7 +36,9 @@ text alone. The judge doesn't see the questionnaire, and the diarist doesn't see
 ## Finding 1: Social isolation agrees, the other two don't
 
 ![Two bar charts. Left: self-ratings by steered profile on three scales; only social withdrawal rises clearly, for
-the social-isolation diarists. Right: judge scores; each schema's own diarists stand out](figures/q1-self-report-vs-judge.png)
+the social-isolation diarists. Right: judge scores; each schema's own diarists stand out](figures/q1-self-report-vs-judge.png#gh-light-mode-only)
+![Two bar charts. Left: self-ratings by steered profile on three scales; only social withdrawal rises clearly, for
+the social-isolation diarists. Right: judge scores; each schema's own diarists stand out](figures/q1-self-report-vs-judge-dark.png#gh-dark-mode-only)
 
 At ~400 words, unsteered controls → diarists steered toward the matching schema:
 
@@ -53,7 +55,10 @@ Per diary, across all 228:
 
 ![Three scatter plots of self-rating against judge score. Social withdrawal vs. social isolation follows a tight
 rising line (r = 0.87); grandiosity vs. entitlement and perfectionism vs. unrelenting standards are mostly
-flat](figures/q3-per-diary.png)
+flat](figures/q3-per-diary.png#gh-light-mode-only)
+![Three scatter plots of self-rating against judge score. Social withdrawal vs. social isolation follows a tight
+rising line (r = 0.87); grandiosity vs. entitlement and perfectionism vs. unrelenting standards are mostly
+flat](figures/q3-per-diary-dark.png#gh-dark-mode-only)
 
 ## Finding 2: Entitlement shows in the writing, not in the self-report
 
@@ -76,7 +81,10 @@ appears here without anyone instructing it.
 
 ![Horizontal bars for the six social-withdrawal items. Unsteered diarists rate every item about 3.8–4.0, including
 the two reverse-worded ones; social-isolation diarists rate the reverse-worded items low (about 2) and the others
-high (about 4.4–4.8)](figures/q2-withdrawal-items.png)
+high (about 4.4–4.8)](figures/q2-withdrawal-items.png#gh-light-mode-only)
+![Horizontal bars for the six social-withdrawal items. Unsteered diarists rate every item about 3.8–4.0, including
+the two reverse-worded ones; social-isolation diarists rate the reverse-worded items low (about 2) and the others
+high (about 4.4–4.8)](figures/q2-withdrawal-items-dark.png#gh-dark-mode-only)
 
 The unsteered diarists rate *"Enjoy going to social gatherings"* 3.95 **and** *"Rarely enjoy being with people"*
 3.84: they agree with both of two opposite statements. This is **acquiescence**, a tendency to say yes regardless

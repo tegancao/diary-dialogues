@@ -4,19 +4,33 @@
     fs.apply()                      # once, before plotting
     ax.plot(..., color=fs.APP["phi-4"])
     fs.save(fig, path)
+
+FIGSTYLE=dark switches to a palette for the website's dark mode, and save() then writes name-dark.png next to
+name.png. The Markdown shows each pair with GitHub's #gh-light-mode-only / #gh-dark-mode-only markers, which the
+MkDocs site also understands.
 """
+import os
 from pathlib import Path
 
 from diary_dialogues.paths import ROOT
 
 FONT_DIR = ROOT / "docs" / "fonts"
 
-INK = "#1f2937"        # text
-MUTED = "#6b7280"      # secondary text, axis labels
-LINE = "#d1d5db"       # axes, rules
-GRID = "#eef0f3"
-PAPER = "#ffffff"
-SOFT = "#f6f7f9"       # panels, cards
+DARK = os.environ.get("FIGSTYLE") == "dark"
+if not DARK:
+    INK = "#1f2937"        # text
+    MUTED = "#6b7280"      # secondary text, axis labels
+    LINE = "#d1d5db"       # axes, rules
+    GRID = "#eef0f3"
+    PAPER = "#ffffff"
+    SOFT = "#f6f7f9"       # panels, cards
+else:                      # matched to the site's dark ("slate") background
+    INK = "#e5e7eb"
+    MUTED = "#9ca3af"
+    LINE = "#4b5263"
+    GRID = "#2b2e3a"
+    PAPER = "#1e2029"
+    SOFT = "#272a36"
 
 # Fixed colors per app and per profile, the same in every figure.
 APP = {"gemma-3-12b": "#3b82c4", "llama-3.1-8b": "#8467c9", "phi-4": "#2a9d8f", "claude-opus-5.5": "#d4793a",
@@ -28,7 +42,15 @@ PROFILE = {"control": "#a3a9b3", "Social_Isolation": "#3b82c4", "Entitlement": "
 PROFILE_LABEL = {"control": "Unsteered", "Social_Isolation": "Social isolation", "Entitlement": "Entitlement",
                  "Unrelenting_Standards": "Unrelenting standards", "Enmeshment": "Enmeshment"}
 ACCENT = "#3b82c4"
-CMAP = "Blues"
+
+
+def _cmap(colors):
+    from matplotlib.colors import LinearSegmentedColormap
+    return LinearSegmentedColormap.from_list("figstyle", colors)
+
+
+CMAP = "Blues" if not DARK else _cmap([PAPER, "#25466b", ACCENT, "#9cc7f0"])            # sequential
+DIVERGING = "RdBu_r" if not DARK else _cmap(["#4a8fd4", "#2d4566", SOFT, "#6e3b2c", "#d4793a"])
 
 
 def apply():
@@ -77,5 +99,8 @@ def save(fig, path: Path):
         for t in texts:
             t.set_visible(True)
             t.set_x(x0)
+    path = Path(path)
+    if DARK:
+        path = path.with_name(path.stem + "-dark" + path.suffix)
     fig.savefig(path, dpi=200, bbox_inches="tight", pad_inches=0.15)
     plt.close(fig)

@@ -35,7 +35,7 @@ def toy_difference_of_means():
     ax.scatter(*pos.T, s=18, c=POS, alpha=.55, label="replies told to show the schema")
     mn, mp = neg.mean(0), pos.mean(0)
     for m, c in ((mn, NEG), (mp, POS)):
-        ax.scatter(*m, s=160, c=c, edgecolor="white", zorder=3, marker="X")
+        ax.scatter(*m, s=160, c=c, edgecolor=fs.PAPER, zorder=3, marker="X")
     ax.annotate("", xy=mp, xytext=mn, arrowprops=dict(arrowstyle="-|>", lw=2.5, color=fs.INK))
     ax.text(*(mn + mp) / 2 + [-.35, .55], "schema vector\n= mean(show) − mean(avoid)", ha="right", fontsize=10,
             color=fs.INK)
@@ -74,7 +74,7 @@ def size_of_the_nudge(demo):
 def cosine_matrix():
     V = torch.stack([vec(s)[15] for s in SCHEMAS]); U = V / V.norm(dim=1, keepdim=True); C = (U @ U.T).numpy()
     fig, ax = plt.subplots(figsize=(8.4, 7.4))
-    im = ax.imshow(C, cmap="RdBu_r", vmin=-1, vmax=1); ax.grid(False)
+    im = ax.imshow(C, cmap=fs.DIVERGING, vmin=-1, vmax=1); ax.grid(False)
     for side in ("left", "bottom"):
         ax.spines[side].set_visible(False)
     labels = [s.replace("_", " ") for s in SCHEMAS]

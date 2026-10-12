@@ -70,13 +70,17 @@ averaged over all kept pairs. Everything the two groups share (topic, grammar, b
 What remains points from "avoids the schema" toward "shows the schema".
 
 ![Two clouds of points, one for answers that avoid the schema and one for answers that show it, with an arrow
-from the first group's mean to the second's](figures/1-difference-of-means.png)
+from the first group's mean to the second's](figures/1-difference-of-means.png#gh-light-mode-only)
+![Two clouds of points, one for answers that avoid the schema and one for answers that show it, with an arrow
+from the first group's mean to the second's](figures/1-difference-of-means-dark.png#gh-dark-mode-only)
 
 The result for each schema is a table of 29 × 3,584 numbers: one vector per layer (row 0 is the embedding; row *l*
 is the output of block *l*). The vectors get longer in deeper layers, because hidden states themselves grow with depth:
 
 ![Line chart: the length of three schema vectors rises from near 0 at layer 0 to about 8–16 at layer 15 and
-60–70 at the last layer](figures/2-vector-length-by-layer.png)
+60–70 at the last layer](figures/2-vector-length-by-layer.png#gh-light-mode-only)
+![Line chart: the length of three schema vectors rises from near 0 at layer 0 to about 8–16 at layer 15 and
+60–70 at the last layer](figures/2-vector-length-by-layer-dark.png#gh-dark-mode-only)
 
 ## 4. How we apply a vector
 
@@ -131,7 +135,9 @@ can be written in one batch.
 state a little rather than replacing it:
 
 ![Bar chart: the layer-15 hidden state has length 68.8; the nudge 2 × vector has length 16.4, about 24% of
-it](figures/4-size-of-the-nudge.png)
+it](figures/4-size-of-the-nudge.png#gh-light-mode-only)
+![Bar chart: the layer-15 hidden state has length 68.8; the nudge 2 × vector has length 16.4, about 24% of
+it](figures/4-size-of-the-nudge-dark.png#gh-dark-mode-only)
 
 ## 5. What it does to the writing
 
@@ -163,7 +169,9 @@ The steered diaries sit clearly higher, so the schema is now in the text itself,
 matters later: a reply to the diary is responding to text that genuinely carries the schema.
 
 ![Line chart: per-token projection onto the schema direction for 3 unsteered diaries (mean −7.6) and 3 steered
-diaries (mean −3.3)](figures/5-projection-per-token.png)
+diaries (mean −3.3)](figures/5-projection-per-token.png#gh-light-mode-only)
+![Line chart: per-token projection onto the schema direction for 3 unsteered diaries (mean −7.6) and 3 steered
+diaries (mean −3.3)](figures/5-projection-per-token-dark.png#gh-dark-mode-only)
 
 (The values are negative throughout because a direction has no natural zero; what carries meaning is the difference
 between the two groups, and changes over time.)
@@ -176,7 +184,9 @@ between the two groups, and changes over time.)
   set of schemas that are distinct both in this chart and in the judge's ratings:
 
   ![Heat map of cosine similarities between the 18 schema vectors at layer 15, ranging from about −0.6 to
-  0.9](figures/6-vector-similarity.png)
+  0.9](figures/6-vector-similarity.png#gh-light-mode-only)
+![Heat map of cosine similarities between the 18 schema vectors at layer 15, ranging from about −0.6 to
+  0.9](figures/6-vector-similarity-dark.png#gh-dark-mode-only)
 
 - **Too much strength breaks the text.** Larger coefficients or deeper layers push the model toward repetition or
   incoherence. Every diary is therefore also scored for coherence, and incoherent ones are excluded.

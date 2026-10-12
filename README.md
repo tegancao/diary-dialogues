@@ -8,6 +8,7 @@ sides. No real people take part.
 
 - **Overview**, with diagrams: [docs/project-overview.md](docs/project-overview.md)
 - **How the evaluation works:** [docs/evaluation.md](docs/evaluation.md)
+- **Future work:** [docs/findings.md#future-work](docs/findings.md#future-work)
 - **Results so far:** [docs/findings.md](docs/findings.md); also as a website built from these Markdown files: [tegancao.github.io/diary-dialogues](https://tegancao.github.io/diary-dialogues/)
 
 **Main result so far:** the open chatbots we tested (8B to 70B, including the newest Gemma) fall well short of the
@@ -22,8 +23,8 @@ Checking the judges against human ratings is future work.
   Test for asking before advising rather than assuming a bigger model is safer.
 - **Evaluating chatbots?** Clinician criteria written for one conversation grade replies in another almost at random
   (rank correlation 0.04), so multi-turn evaluation needs criteria that hold across conversations, checked by people.
-  Model judges agree on concrete behaviors (asking a question, κ 0.75) but not on judgment calls (endorsing a view,
-  κ 0.16); one judge called a bare "Thank you for sharing." endorsing in 39% of replies. Running published models
+  Model judges agree on concrete behaviors but not on judgment calls: their agreement beyond chance (Cohen's κ, where
+  1 is perfect and 0 is chance) is 0.75 on asking a question and 0.16 on endorsing a view. One judge called a bare "Thank you for sharing." endorsing in 39% of replies. Running published models
   through an open grader puts its scores on the published scale.
 - **Simulating users?** Activation steering gives a recognizable pattern in the writing, and steering the other way
   gives a healthier person, not an opposite problem. But a constantly steered person can't improve whatever the reply
@@ -111,3 +112,5 @@ contains a vector named `evil` from the method this paper builds on; it is not o
   [code](https://github.com/zrkqjz/ems-activation-steering) (Apache-2.0) ·
   [data](https://doi.org/10.5281/zenodo.21715792) (CC BY 4.0)
 - MentalHealthBench: OpenAI (2026), MIT license.
+- Behavior rubric modeled on VERA-MH (Belli et al. 2026); patterns from schema therapy (Young, Klosko & Weishaar
+  2003); judge agreement as Cohen's κ (Cohen 1960). Full list: [docs/index.md](docs/index.md#references).

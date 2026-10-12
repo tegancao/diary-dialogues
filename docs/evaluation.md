@@ -54,7 +54,13 @@ clinicians for that case, the judge checks each, score is points met over points
 for benchmark cases. Borrowed criteria: reads any conversation, uses 150 general clinician criteria picked by the
 judge; ranks models correctly but per reply is close to random, not used. Behavior rubric: reads a diary
 conversation, uses 15 fixed yes/no questions on 4 behaviors; used for the diaries, graded by two
-judges](figures/e0-three-ways.png)
+judges](figures/e0-three-ways.png#gh-light-mode-only)
+![Three columns. Benchmark criteria: reads a benchmark conversation and the chatbot's reply, uses 2–15 criteria written by
+clinicians for that case, the judge checks each, score is points met over points possible; the reference, but only
+for benchmark cases. Borrowed criteria: reads any conversation, uses 150 general clinician criteria picked by the
+judge; ranks models correctly but per reply is close to random, not used. Behavior rubric: reads a diary
+conversation, uses 15 fixed yes/no questions on 4 behaviors; used for the diaries, graded by two
+judges](figures/e0-three-ways-dark.png#gh-dark-mode-only)
 
 **Borrowed criteria failed.** Tested on the benchmark itself, where the right answers are known, they ranked five
 models in the right order but scored individual replies almost at random (rank correlation 0.04): clinical

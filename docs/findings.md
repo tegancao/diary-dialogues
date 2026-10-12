@@ -49,7 +49,8 @@ from it. On the first entry (judge: Mistral-Small-3.1; differences paired by dia
 Steering away subtracts the same vector instead of adding it (strength −2.0). It could have produced the mirror-image
 problem (an isolated diarist turned clingy), a healthier person, or nonsense. It produces the healthier person:
 
-![For each pattern, three bars: steered toward (79, 70, 81), unsteered (17, 9, 17) and steered away (6, 8, 13)](figures/s1-steering-away.png)
+![For each pattern, three bars: steered toward (79, 70, 81), unsteered (17, 9, 17) and steered away (6, 8, 13)](figures/s1-steering-away.png#gh-light-mode-only)
+![For each pattern, three bars: steered toward (79, 70, 81), unsteered (17, 9, 17) and steered away (6, 8, 13)](figures/s1-steering-away-dark.png#gh-dark-mode-only)
 
 - **The pattern drops below an ordinary day,** most for isolation (17 to 6). Entitlement is already near zero
   unsteered, so it has little room to fall.
@@ -68,7 +69,9 @@ schema scores, not measured wellbeing.
 ### Over the conversation
 
 ![Pattern score by entry for each chatbot and pattern: all lines rise from about 70–80 to 85–90; the unsteered diarist
-stays near 10–20](figures/f0-patterns-over-time.png)
+stays near 10–20](figures/f0-patterns-over-time.png#gh-light-mode-only)
+![Pattern score by entry for each chatbot and pattern: all lines rise from about 70–80 to 85–90; the unsteered diarist
+stays near 10–20](figures/f0-patterns-over-time-dark.png#gh-dark-mode-only)
 
 - **The patterns grow 7–13 points over four entries, even with "Thank you for sharing." as the only reply:** the
   diarist's own entries accumulate in its context. No chatbot lowers a pattern more than that baseline, Claude Opus
@@ -88,7 +91,10 @@ Graded on the benchmark's own conversations and clinician-written criteria, not 
 
 ![Published MentalHealthBench scores from 57.3 down to 29.5, with our six open models at 26.0 to 33.5 at the bottom, and
 Claude Haiku 4.5 and Opus 5.5 through our grader at 42.9 and 50.3, close to their published 41.7 and
-52.4](figures/f2-benchmark-placement.png)
+52.4](figures/f2-benchmark-placement.png#gh-light-mode-only)
+![Published MentalHealthBench scores from 57.3 down to 29.5, with our six open models at 26.0 to 33.5 at the bottom, and
+Claude Haiku 4.5 and Opus 5.5 through our grader at 42.9 and 50.3, close to their published 41.7 and
+52.4](figures/f2-benchmark-placement-dark.png#gh-dark-mode-only)
 
 - **Our grader matches the published scale:** Claude Haiku 4.5 scores 42.9 (published 41.7) and Opus 5.5 50.3
   (published 52.4). A second judge, gpt-oss-120b, ranks the models the same way.
@@ -112,10 +118,13 @@ Claude Haiku 4.5 and Opus 5.5 through our grader at 42.9 and 50.3, close to thei
 ## 3. The chatbots in the diary conversations
 
 ![Four grids, chatbot by diarist pattern, % of replies: talks about the diary as writing; asks no question; endorses the
-person's rigid view; judge sees risk in the conversation](figures/f1-behaviors.png)
+person's rigid view; judge sees risk in the conversation](figures/f1-behaviors.png#gh-light-mode-only)
+![Four grids, chatbot by diarist pattern, % of replies: talks about the diary as writing; asks no question; endorses the
+person's rigid view; judge sees risk in the conversation](figures/f1-behaviors-dark.png#gh-dark-mode-only)
 
 A second judge (gpt-oss-120b) graded the same 768 replies. Where the two judges agree, a result is solid; where they
-don't, it is reported as unsettled. Replies to steered diarists, Mistral / gpt-oss:
+don't, it is reported as unsettled. Agreement is Cohen's κ: how much the judges agree beyond chance, where 1 is
+perfect, 0 is chance, and above 0.6 is usually read as good. Replies to steered diarists, Mistral / gpt-oss:
 
 | Behavior | Judges agree (κ) | Gemma | Llama | Phi-4 | Haiku | Opus | "Thank you for sharing." |
 |---|---|---|---|---|---|---|---|
@@ -148,7 +157,9 @@ clinicians' ratings would have to settle.
 ## 4. Clinician criteria don't transfer
 
 ![Two panels: per reply, borrowed-criteria scores show no relationship with official scores; per model, the five
-models line up in the right order](figures/e1-borrowed-criteria.png)
+models line up in the right order](figures/e1-borrowed-criteria.png#gh-light-mode-only)
+![Two panels: per reply, borrowed-criteria scores show no relationship with official scores; per model, the five
+models line up in the right order](figures/e1-borrowed-criteria-dark.png#gh-dark-mode-only)
 
 Tested on the benchmark itself, where the right answers are known:
 
@@ -173,7 +184,11 @@ other.
 ![Four line charts over letters 1–3. The steered writer's entitlement rises to 78 with a friend steered the same way
 and to 45–55 with any other friend; their isolation rises from about 60 to 80 whatever the friend. An unsteered
 friend stays low: entitlement 11 to 17, isolation about 12, against about 8 for two unsteered
-friends](figures/s2-dyads.png)
+friends](figures/s2-dyads.png#gh-light-mode-only)
+![Four line charts over letters 1–3. The steered writer's entitlement rises to 78 with a friend steered the same way
+and to 45–55 with any other friend; their isolation rises from about 60 to 80 whatever the friend. An unsteered
+friend stays low: entitlement 11 to 17, isolation about 12, against about 8 for two unsteered
+friends](figures/s2-dyads-dark.png#gh-dark-mode-only)
 
 **Scores, letter by letter** (Mistral, gpt-oss in brackets):
 
@@ -231,10 +246,13 @@ mood that builds.
 - **Short conversations:** four entries; the two Claude models were run as references, with default sampling.
 - **Not a clinical assessment** of any model or anyone.
 
-## Where this could go
+## Future work
 
 The diarists are a simulation, so how their patterns move over four entries says more about the steering than about
 people. The chatbots' replies are real behavior of real models, and that is where most of the next steps lie.
+
+- **Human ratings.** Checking the judges against people, ideally clinicians, on a sample of replies. It matters most
+  for the judgment calls the two judges disagree on.
 
 - **Post-training for better replies.** Size and newer training barely help (Llama 70B vs 8B, Gemma 27B vs 12B,
   Gemma 4 vs 3), and the gap to Claude is in exploring before advising. Fine-tuning or preference training an open
@@ -242,10 +260,8 @@ people. The chatbots' replies are real behavior of real models, and that is wher
   preference-tuned), would test whether post-training is where they come from.
 - **Interpretability.** Does a chatbot internally register the person's pattern, and if so, why doesn't its reply
   show it? Separating "missed it" from "noticed it and went along" points to different fixes.
-- **A careful measurement framework.** The judges agree on concrete behaviors (asking a question) and disagree on
-  judgment calls (endorsing a view, when to escalate). Human ratings, ideally clinicians', are needed to learn which
-  questions a model judge can grade and to set the clinical thresholds the judges can't, such as when hopelessness
-  counts as risk.
+- **A careful measurement framework.** With those ratings, learn which questions a model judge can grade and set the
+  clinical thresholds the judges can't, such as when hopelessness counts as risk.
 - **Simulated social experiments, as thought experiments.** The friends experiment shows the kind of question
   simulation can raise, such as whether patterns spread between people. Such results are only as good as the model's
   grasp of how people write and respond, and steered behavior can be stereotyped. They suggest hypotheses to test

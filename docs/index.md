@@ -10,11 +10,14 @@ judge models read what the chatbots say back, entry after entry. No real people 
 published standard on OpenAI's MentalHealthBench, and they show the same gaps answering the simulated diaries.
 
 ![Rosa's first diary entry three ways: with no nudge, nudged toward social isolation, and nudged toward
-entitlement](figures/o1-rosa-three-ways.png)
+entitlement](figures/o1-rosa-three-ways.png#gh-light-mode-only)
+![Rosa's first diary entry three ways: with no nudge, nudged toward social isolation, and nudged toward
+entitlement](figures/o1-rosa-three-ways-dark.png#gh-dark-mode-only)
 
 ## Read more
 
-- [Findings](findings.md): how we test, the results, limits, where this could go, and compute
+- [Findings](findings.md): how we test, the results, limits, and compute
+- [Future work](findings.md#future-work): human ratings, post-training, interpretability, measurement
 - [How we evaluate](evaluation.md): the judges, the benchmark, the behavior rubric
 - [Project overview](project-overview.md): the diarists, how a conversation works, the set-up
 - [How steering works](steering-explained.md): the nudge, from scratch
@@ -29,8 +32,8 @@ entitlement](figures/o1-rosa-three-ways.png)
   Test for asking before advising rather than assuming a bigger model is safer.
 - **Evaluating chatbots?** Clinician criteria written for one conversation grade replies in another almost at random
   (rank correlation 0.04), so multi-turn evaluation needs criteria that hold across conversations, checked by people.
-  Model judges agree on concrete behaviors (asking a question, κ 0.75) but not on judgment calls (endorsing a view,
-  κ 0.16); one judge called a bare "Thank you for sharing." endorsing in 39% of replies. Running published models
+  Model judges agree on concrete behaviors but not on judgment calls: their agreement beyond chance (Cohen's κ, where
+  1 is perfect and 0 is chance) is 0.75 on asking a question and 0.16 on endorsing a view. One judge called a bare "Thank you for sharing." endorsing in 39% of replies. Running published models
   through an open grader puts its scores on the published scale.
 - **Simulating users?** Activation steering gives a recognizable pattern in the writing, and steering the other way
   gives a healthier person, not an opposite problem. But a constantly steered person can't improve whatever the reply
@@ -39,6 +42,21 @@ entitlement](figures/o1-rosa-three-ways.png)
   about $110 of compute.
 
 Limits: no human validation yet, one diarist model, eight characters, four entries per conversation.
+
+## References
+
+- Zhang, R. et al. (2026). Mechanistic control of large language models as simulated participants via linear
+  representation. *npj Artificial Intelligence.*
+  [doi:10.1038/s44387-026-00160-9](https://doi.org/10.1038/s44387-026-00160-9) · schema vectors and steering method
+  ([code](https://github.com/zrkqjz/ems-activation-steering), [data](https://doi.org/10.5281/zenodo.21715792))
+- OpenAI (2026). [MentalHealthBench](https://openai.com/index/introducing-mentalhealthbench/): the benchmark
+  conversations, clinician criteria and grader prompt
+- Belli et al. (2026). VERA-MH: the model for the behavior rubric's yes/no question flows
+- Young, J. E., Klosko, J. S., & Weishaar, M. E. (2003). *Schema Therapy: A Practitioner's Guide.* Guilford Press:
+  the patterns (early maladaptive schemas)
+- Cohen, J. (1960). A coefficient of agreement for nominal scales. *Educational and Psychological Measurement*,
+  20(1), 37–46: κ, the judges' agreement beyond chance
+- [International Personality Item Pool](https://ipip.ori.org/): the public-domain self-report scales
 
 *The diaries are simulations of how a pattern reads in text, not real people; some contain simulated hopelessness.
 Nothing here is a clinical assessment of any model or anyone.*

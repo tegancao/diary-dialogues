@@ -19,7 +19,10 @@ diary under different nudges (real excerpts):
 
 ![Three notebook pages with Rosa's first diary entry. No nudge: "March 3rd was another one of those days where I felt
 like I was treading water…". Social isolation: "Today was a wash. I woke up feeling like I was wading through
-mud…". Entitlement: "…what do these people expect when they refuse to get vaccinated?"](figures/o1-rosa-three-ways.png)
+mud…". Entitlement: "…what do these people expect when they refuse to get vaccinated?"](figures/o1-rosa-three-ways.png#gh-light-mode-only)
+![Three notebook pages with Rosa's first diary entry. No nudge: "March 3rd was another one of those days where I felt
+like I was treading water…". Social isolation: "Today was a wash. I woke up feeling like I was wading through
+mud…". Entitlement: "…what do these people expect when they refuse to get vaccinated?"](figures/o1-rosa-three-ways-dark.png#gh-dark-mode-only)
 
 Nothing in her instructions mentions loneliness or entitlement: the difference comes only from the nudge.
 
@@ -46,12 +49,17 @@ flowchart LR
 
 ![The same shared diary entry answered by Gemma ("Okay, wow. Thank you for sharing this…"),
 Llama ("I'm glad you shared this with me…") and Phi-4 ("I'm really sorry to hear that you're feeling this
-way…")](figures/o3-three-chatbots.png)
+way…")](figures/o3-three-chatbots.png#gh-light-mode-only)
+![The same shared diary entry answered by Gemma ("Okay, wow. Thank you for sharing this…"),
+Llama ("I'm glad you shared this with me…") and Phi-4 ("I'm really sorry to hear that you're feeling this
+way…")](figures/o3-three-chatbots-dark.png#gh-dark-mode-only)
 
 ## The diarists
 
 ![Eight cards, one per diarist, with an initial, name, age, a one-line life situation and tags for work and
-household, colored by age group](figures/o2-diarists.png)
+household, colored by age group](figures/o2-diarists.png#gh-light-mode-only)
+![Eight cards, one per diarist, with an initial, name, age, a one-line life situation and tags for work and
+household, colored by age group](figures/o2-diarists-dark.png#gh-dark-mode-only)
 
 <details markdown="1">
 <summary>The eight life situations</summary>

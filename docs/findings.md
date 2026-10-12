@@ -1,17 +1,7 @@
 # Findings
 
-Results so far. Checking the judges against human ratings is future work.
-
-## How we test
-
-Every chatbot is tested twice, by two open judge models (Mistral-Small-3.1 and gpt-oss-120b):
-
-| Test | What the chatbot answers | How the reply is graded |
-|---|---|---|
-| **OpenAI's benchmark** (MentalHealthBench) | 300 of the benchmark's own published conversations, not the diaries | Against the criteria clinicians wrote for each conversation; placed on the published scale with Claude Haiku and Opus as anchors |
-| **The diaries** | The steered diarists' entries, four per conversation | 15 yes/no questions on four behaviors, such as asking before advising (no clinician criteria exist for diaries) |
-
-Details: [evaluation.md](evaluation.md).
+Results so far. How each chatbot is tested: [How we evaluate](evaluation.md). Checking the judges against human
+ratings is future work.
 
 ## In brief
 

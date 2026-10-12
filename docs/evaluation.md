@@ -4,6 +4,15 @@ Two questions: are the simulated diarists who we intend them to be, and how do A
 done by open models with published prompts, so every number can be regenerated. Project overview:
 [project-overview.md](project-overview.md); results: [findings.md](findings.md).
 
+## How we test
+
+Every chatbot is tested twice, by two open judge models (Mistral-Small-3.1 and gpt-oss-120b):
+
+| Test | What the chatbot answers | How the reply is graded |
+|---|---|---|
+| **OpenAI's benchmark** (MentalHealthBench) | 300 of the benchmark's own published conversations, not the diaries | Against the criteria clinicians wrote for each conversation; placed on the published scale with Claude Haiku and Opus as anchors |
+| **The diaries** | The steered diarists' entries, four per conversation | 15 yes/no questions on four behaviors, such as asking before advising (no clinician criteria exist for diaries) |
+
 ## The judges
 
 Two open **judge models**, Mistral-Small-3.1 (24B) and gpt-oss-120b, from families that appear nowhere else in the
